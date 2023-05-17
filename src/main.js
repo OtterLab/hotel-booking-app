@@ -10,6 +10,9 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 
+// vuex store
+import store from './store/index'
+
 // Plugins
 import { registerPlugins } from '@/plugins'
 
@@ -17,4 +20,4 @@ const app = createApp(App)
 
 registerPlugins(app)
 
-app.mount('#app')
+app.use(store).mount('#app')
