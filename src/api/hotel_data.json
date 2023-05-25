@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "hotel_name": "M Centara Hotel",
+        "location": "Malibu Street",
+        "ratings": "5 star",
+        "hotel_image": "http://localhost:3000/src/assets/hotel_images/m-centara_hotel.png"
+    },
+    {
+        "id": 2,
+        "hotel_name": "Sea Breeze Villa",
+        "location": "Paradise Soul Blvd",
+        "ratings": "4 star",
+        "hotel_image": "http://localhost:3000/src/assets/hotel_images/hotel_resort_villa.png"
+    },
+    {
+        "id": 3,
+        "hotel_name": "Sunset Samui Hotel",
+        "location": "Koh Samui Bay",
+        "ratings": "5 star",
+        "hotel_image": "http://localhost:3000/src/assets/hotel_images/hotel_resort.png"
+    },
+    {
+        "id": 4,
+        "hotel_name": "Meila Hotel & Resort",
+        "location": "Surfers Coast Water Ave",
+        "ratings": "5 star",
+        "hotel_image": "http://localhost:3000/src/assets/hotel_images/the_outdoor_resort.png"
+    },
+    {
+        "id": 5,
+        "hotel_name": "JW Sheraton Hotel",
+        "location": "An Lam Vuong Street",
+        "ratings": "4 star",
+        "hotel_image": "http://localhost:3000/src/assets/hotel_images/the_outdoor_villa_view.png"
+    }
+]

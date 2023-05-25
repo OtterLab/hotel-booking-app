@@ -11,7 +11,7 @@ import App from './App.vue'
 import { createApp } from 'vue'
 
 // vuex store
-import store from './store/index'
+import store from './store/store'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
