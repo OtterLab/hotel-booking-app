@@ -1,17 +1,16 @@
 <template>
   <v-layout>
-    <v-app-bar app height="50" :elevation="0">
-      <v-toolbar color="blue-grey-darken-3">
-        <v-app-bar-nav-icon @click.stop="drawer = !drawer" :ripple="false">
-          <v-icon icon="mdi-sort-variant" size="25"></v-icon>
-        </v-app-bar-nav-icon>
+    <v-app-bar app height="50" :elevation="0" color="blue-grey-darken-3">
 
-        <v-spacer></v-spacer>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" :ripple="false">
+        <v-icon icon="mdi-sort-variant" size="25"></v-icon>
+      </v-app-bar-nav-icon>
 
-        <v-btn icon :ripple="false">
-          <v-icon icon="mdi-magnify" size="25"></v-icon>
-        </v-btn>
-      </v-toolbar>
+      <v-spacer></v-spacer>
+
+      <v-btn icon :ripple="false">
+        <v-icon icon="mdi-magnify" size="25"></v-icon>
+      </v-btn>
     </v-app-bar>
     
     <v-navigation-drawer v-model="drawer">
