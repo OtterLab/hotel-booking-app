@@ -1,43 +1,24 @@
-import { createStore } from 'vuex'
-import axios from 'axios'
+import { createStore } from "vuex";
+import { auth } from './modules/auth.js';
+import { booking } from './modules/booking.js';
+import { customer } from './modules/customer.js';
+import { hotel } from './modules/hotel.js';
+import { price } from './modules/price.js';
+import { room_capacity } from './modules/room_capacity.js';
+import { room_type } from './modules/room_type.js';
+import { room } from './modules/room.js';
 
-export default createStore({
-    state: {
-        hotels: [],
-        rooms: []
-    },
-    mutations: {
-        SET_HOTELS(state, hotels) {
-            state.hotels = hotels;
-        },
-        SET_ROOMS(state, rooms) {
-            state.rooms = rooms;
-        }
-    },
-    actions: {
-        SHOW_HOTELS({ commit }) {
-            axios.get("http://localhost:3000/src/api/hotel_data.json")
-            .then(response => response.data)
-            .then(hotels => {
-                console.log(hotels);
-                commit("SET_HOTELS", hotels)
-            })
-        },
-        SHOW_ROOMS({ commit }) {
-            axios.get("http://localhost:3000/src/api/room_data.json")
-            .then(response => response.data)
-            .then(rooms => {
-                console.log(rooms);
-                commit("SET_ROOMS", rooms)
-            })
-        }
-    },
-    getters: {
-        hotels: state => {
-            return state.hotels;
-        },
-        rooms: state => {
-            return state.rooms;
-        }
+const store = createStore({
+    modules: {
+        auth,
+        booking,
+        customer,
+        hotel,
+        price,
+        room_capacity,
+        room_type,
+        room
     }
-})
+});
+
+export default store;

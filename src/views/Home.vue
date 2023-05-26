@@ -1,30 +1,30 @@
 <template>
-  <div class="home-bg">
-    <div class="home-content">
-      <div class="auth-login-content">
+  <div class="home_bg">
+    <div class="home_content">
+      <div class="auth_login_content">
         <h4 class="text-white font-weight-regular">Welcome,</h4>
         <h3 class="text-white font-weight-bold">Username</h3>
       </div>
 
-      <div class="home-icon-card-group">
+      <div class="home_icon_card_group">
         <h3 class="pl-7 pb-4 text-white font-weight-medium">Hotel Offers</h3>
-        <div class="home-icon-card-content">
-          <v-card class="home-icon-card-item" :elevation="2">
+        <div class="home_icon_card_content">
+          <v-card class="home_icon_card_item" :elevation="2">
             <v-icon icon="mdi-ticket-percent-outline" color="blue-grey-darken-1" size="40"></v-icon>
-            <span class="home-icon-card-text">Discount</span>
+            <span class="home_icon_card_text">Discount</span>
           </v-card>
-          <v-card class="home-icon-card-item" :elevation="2">
+          <v-card class="home_icon_card_item" :elevation="2">
             <v-icon icon="mdi-pool" color="blue-grey-darken-1" size="40"></v-icon>
-            <span class="home-icon-card-text">Swimming Pool</span>
+            <span class="home_icon_card_text">Swimming Pool</span>
           </v-card>
-          <v-card class="home-icon-card-item" :elevation="2">
+          <v-card class="home_icon_card_item" :elevation="2">
             <v-icon icon="mdi-plane-car" color="blue-grey-darken-1" size="40"></v-icon>
-            <span class="home-icon-card-text">Airport Transfer</span>
+            <span class="home_icon_card_text">Airport Transfer</span>
           </v-card>
         </div>
       </div>
 
-      <div class="feature-content">
+      <div class="feature_content">
         <h3 class="pl-8 text-grey-darken-3 font-weight-medium">Feature Hotel</h3>
         <v-carousel hide-delimiter-background delimiter-icon="mdi-circle-outline" color="grey" height="360" :show-arrows="false" cycle>
           <v-carousel-item>
@@ -120,58 +120,89 @@
         </v-carousel>
       </div>
       
-      <div class="rooms_content">
+      <div class="room_content">
         <h3 class="pl-8 text-grey-darken-2">Rooms</h3>
-        
-        <!-- <div class="room_card_container">
-          <div v-for="room_image in room_images" :key="room_image">
-            <v-img :src="room_image" class="room_img"></v-img>
+        <div class="room_card_container">
+          <div class="roomImgBox">
+            <v-img src="@/assets/room_images/comtemporary_luxury_bedroom.png" class="room_img"></v-img>
           </div>
           <div class="room_card">
-            <div class="room_card_content">
+            <div class="room_info">
               <div class="room_text">
-                <div class="text-subtitle-1 text-grey-darken-2 font-weight-medium">Room Name</div>
+                <div class="text-subtitle-2 text-grey-darken-2 font-weight-medium">Room Name</div>
                 <div class="text-body-2 text-grey-darken-1 font-weight-regular">Room Type</div>
               </div>
-              <v-btn class="room-btn" variant="outlined" color="blue-grey">
+              <v-btn class="room_btn" variant="outlined" color="blue-grey" size="small">
                 View Room
                 <v-icon icon="mdi-chevron-right-circle-outline pl-2" color="blue-grey"></v-icon>
               </v-btn>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.home-bg {
+.home_bg {
   background-image: linear-gradient(#37474F, #78909C, #FFFFFF);
   height: 60vh;
 }
 
-.home-content {
+.home_content {
   height: 200vh;
 }
 
-.auth-login-content {
+.auth_login_content {
   text-align: center;
   position: relative;
   top: 2em;
 }
 
-.feature-content {
+/** home icon card */
+.home_icon_card_group {
+  position: relative;
+  top: 4em;
+}
+
+.home_icon_card_content {
+  text-align: center;
+  display: flex;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.home_icon_card_item {
+  width: 100px;
+  height: 90px;
+  border-radius: 12px;
+  margin: 0 auto;
+  padding-top: .9em;
+}
+
+.home_icon_card_item .home_icon_card_text {
+  display: block;
+}
+
+.home_icon_card_text {
+  font-size: 12px;
+  color: #455A64;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/** Hotel Card  */
+.feature_content {
   position: relative;
   top: 6em;
 }
 
-/** Hotel Card  */
 .hotel_card {
   position: relative;
   width: 330px;
-  height: 230px;
-  top: 5em;
+  height: 220px;
+  top: 4.5em;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 20px 30px rgba(0,0,0,0.15);
@@ -202,46 +233,14 @@
 
 .hotel_card .hotel_content {
   position: absolute;
-  top: 8em;
+  top: 7.8em;
   width: 100%;
   height: 100%;
   text-align: center;
 }
 
-/** home icon card */
-.home-icon-card-group {
-  position: relative;
-  top: 4em;
-}
-
-.home-icon-card-content {
-  text-align: center;
-  display: flex;
-  margin-left: 18px;
-  margin-right: 18px;
-}
-
-.home-icon-card-item {
-  width: 100px;
-  height: 90px;
-  border-radius: 12px;
-  margin: 0 auto;
-  padding-top: .9em;
-}
-
-.home-icon-card-item .home-icon-card-text {
-  display: block;
-}
-
-.home-icon-card-text {
-  font-size: 12px;
-  color: #455A64;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
 /** Rooms Styles */
-.rooms_content {
+.room_content {
   position: relative;
   top: 7em;
 }
@@ -254,32 +253,44 @@
   transform: translateX(-50%);
 }
 
-.room_img {
-  width: 160px;
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  position: absolute;
-  right: 11.4em;
-  top: 1.3em;
-}
-
 .room_card {
-  background-color: white;
+  width: 330px;
+  height: 145px;
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  width: 330px;
-  height: 150px;
+  background-color: white;
 }
 
-.room_card_content {
+.roomImgBox {
+  width: 160px;
+  height: 107px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
   position: absolute;
-  top: 1em;
-  left: 10.3em;
+  right: 10.9em;
+  top: 1.1em;
+  overflow: hidden;
 }
 
-.room-btn {
+.roomImgBox .room_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room_info {
+  position: absolute;
+  top: .9em;
+  left: 10.6em;
+}
+
+.room_btn {
   position: relative;
-  top: 1.9em;
+  top: 1em;
 }
 </style>
 
@@ -290,7 +301,7 @@ export default defineComponent({
   name: "Home",
   data() {
     return {
-      model: null
+      
     }
   },
 })
