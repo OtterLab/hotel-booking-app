@@ -9,6 +9,21 @@ const routes = [
     component: Home
   },
   {
+    path: "/login",
+    name: "login",
+    component: () => import('@/components/Login.vue')
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: () => import('@/components/Register.vue'),
+  },
+  {
+    path: "/update_user",
+    name: "UpdateUser",
+    component: () => import('@/views/UpdateUser.vue'),
+  },
+  {
     path: "/booking_details",
     name: "BookingDetails",
     component: () => import('@/views/BookingDetails.vue')
@@ -19,10 +34,15 @@ const routes = [
     component: () => import('@/views/Profile.vue')
   },
   {
-    path: "/more",
-    name: "More",
-    component: () => import('@/views/More.vue')
-  }
+    path: "/room_list",
+    name: "RoomList",
+    component: () => import('@/views/RoomList.vue')
+  },
+  {
+    path: "/reservation",
+    name: "Reservation",
+    component: () => import('@/views/ReservationPage.vue')
+  },
 ]
 
 const router = createRouter({

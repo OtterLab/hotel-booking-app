@@ -1,6 +1,6 @@
 <template>
   <div class="home_bg">
-    <div class="home_content">
+    <v-container class="home_content">
       <div class="auth_login_content">
         <h4 class="text-white font-weight-regular">Welcome,</h4>
         <h3 class="text-white font-weight-bold">Username</h3>
@@ -140,7 +140,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </v-container>
   </div>
 </template>
 

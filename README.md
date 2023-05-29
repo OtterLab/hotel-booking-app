@@ -1,33 +1,39 @@
-# base
+## Hotel Booking App
+A hotel booking system for customers to make reservations on the go and skip the queue. Customers can manage their booking details using the app.
 
-## Project setup
+### Project Setup
+- git clone https://github.com/OtterLab/hotel-booking-app.git
+- mkdir "folder name"
+- cd booking-app
+- yarn dev
 
+Note: To run this project, please install yarn.
+
+### Install Yarn Package via Homebrew
+Yarn requires node to function.
+
+NPM Package <br>
+https://formulae.brew.sh/formula/node#default
 ```
-# yarn
-yarn
-
-# npm
-npm install
-
-# pnpm
-pnpm install
+brew install node
+```
+Yarn Package <br>
+https://formulae.brew.sh/formula/yarn#default
+```
+brew install yarn
 ```
 
-### Compiles and hot-reloads for development
-
+### Install Scaffolding of Vuetify
 ```
-# yarn
+yarn create vuetify
+```
+Start the server
+```
+cd vuetify-project
 yarn dev
-
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
 ```
-
+https://vuetifyjs.com/en/getting-started/installation/
 ### Compiles and minifies for production
-
 ```
 # yarn
 yarn build
@@ -39,20 +45,5 @@ npm run build
 pnpm build
 ```
 
-### Lints and fixes files
-
-```
-# yarn
-yarn lint
-
-# npm
-npm run lint
-
-# pnpm
-pnpm lint
-```
-
 ### Customize configuration
-
 See [Configuration Reference](https://vitejs.dev/config/).
-# hotel-booking-app

@@ -1,130 +1,145 @@
 <template>
     <div class="profile-bg">
-        <div class="profile-content">
-            <div class="profile-card">
-                <div class="avatar-circle">
-                    <v-icon icon="mdi-account" size="70" color="white" class="avatar-icon"></v-icon>
+        <v-container class="profile_content">
+            <div class="profile_card">
+                <div class="d-flex justify-space-around">
+                    <v-avatar color="white" size="60">
+                        <v-icon icon="mdi-account" color="blue-grey-darken-1" size="45"></v-icon>
+                    </v-avatar>
+                    <div class="profile_info">
+                        <h3 class="text-white font-weight-bold">Username</h3>
+                        <RouterLink to="/update_user" class="edit_user_btn">
+                            Update user details
+                            <v-icon icon="mdi-square-edit-outline" class="pl-2"></v-icon>
+                        </RouterLink>
+                    </div>
                 </div>
-                <div class="profile-info">
-                    <h3 class="text-white font-weight-bold">Hello World</h3>
-                    <p class="text-white">email address</p>
+            </div>
+            <div class="auth_action_content">
+                <div class="auth_action_card">
+                    <div class="d-flex justify-space-around">
+                        <div class="auth_action_btn">
+                            <v-btn prepend-icon="mdi-account" density="comfortable" class="text-body-2 text-grey-darken-2" :ripple="false" stacked variant="text" to="/login">
+                                Login
+                            </v-btn>
+                        </div>
+                        <div class="auth_action_divider"></div>
+                        <div class="auth_action_btn">
+                            <v-btn prepend-icon="mdi-account-edit" density="comfortable" class="text-body-2 text-grey-darken-2" :ripple="false" stacked variant="text" to="/register">
+                                Sign Up
+                            </v-btn>
+                        </div>
+                    </div>
                 </div>
-                <v-btn class="profile-edit-btn text-blue-grey-darken-1">
-                    Edit Profile
-                    <v-icon icon="mdi-square-edit-outline" class="pl-3" size="25" color="blue-grey-darken-1"></v-icon>
-                </v-btn>
+                <div class="room_manager_content">
+                    <div class="room_manager_card">
+                        <h3>Admin Manager</h3>
+                        <v-list density="compact" class="room_manager_list">
+                            <v-list-item v-for="(adminItem, i) in adminItems" :key="i"
+                                :value="adminItem" active-color="blue-grey" :ripple="false">
+                                    <template v-slot:prepend>
+                                    <v-icon :icon="adminItem.icon"></v-icon>
+                                    </template>
+                                <v-list-item-title v-text="adminItem.text" class="text-grey-darken-2"></v-list-item-title>
+                            </v-list-item>
+                        </v-list>
+                    </div>
+                </div>
             </div>
-            <div class="account-form">
-                <v-form>
-                    <div class="form-group">
-                        <v-text-field label="firstname" color="blue-grey" density="comfortable" 
-                            prepend-inner-icon="mdi-account-outline" variant="outlined">
-                        </v-text-field>
-                    </div>
-                    <div class="form-group">
-                        <v-text-field label="surname" color="blue-grey" density="comfortable" 
-                            prepend-inner-icon="mdi-account-outline" variant="outlined">
-                        </v-text-field>
-                    </div>
-                    <div class="form-group">
-                        <v-text-field label="address" color="blue-grey" density="comfortable" 
-                            prepend-inner-icon="mdi-map-marker-outline" variant="outlined">
-                        </v-text-field>
-                    </div>
-                    <div class="form-group">
-                        <v-text-field label="city" color="blue-grey" density="comfortable" 
-                            prepend-inner-icon="mdi-home-city-outline" variant="outlined">
-                        </v-text-field>
-                    </div>
-                    <div class="form-group">
-                        <v-text-field label="country" color="blue-grey" density="comfortable" 
-                            prepend-inner-icon="mdi-map-outline" variant="outlined">
-                        </v-text-field>
-                    </div>
-                    <div class="form-group">
-                        <v-text-field label="phone" color="blue-grey" density="comfortable" 
-                            prepend-inner-icon="mdi-phone-outline" variant="outlined">
-                        </v-text-field>
-                    </div>
-                    <div class="form-group">
-                        <v-text-field label="email" color="blue-grey" density="comfortable" 
-                            prepend-inner-icon="mdi-email-outline" variant="outlined">
-                        </v-text-field>
-                    </div>
-                    <div class="form-group">
-                        <v-btn type="submit" class="submit-btn">
-                            Update User
-                            <v-icon icon="mdi-send-outline" class="pl-2"></v-icon>
-                        </v-btn>
-                    </div>
-                </v-form>
+            <div class="logoBox">
+                <v-img src="@/assets/golook_booking_logo.svg" class="logo_img"></v-img>
             </div>
-        </div>
+        </v-container>
     </div>
 </template>
 
 <style scoped>
 .profile-bg {
     background-image: linear-gradient(#37474F, #78909C, #FFFFFF);
-    height: 60vh;
+    height: 70vh;
 }
 
-.profile-content {
-    width: 100vw;
-    height: 130vh;
+.profile_content {
+    height: 100vh;
+}
+
+.profile_card {
     position: relative;
-    text-align: center;
+    right: 1em;
 }
 
-.profile-card {
+.profile_info {
     position: relative;
-    top: 3em;
+    right: 3.2em;
+    bottom: 1px;
 }
 
-.avatar-circle {
-    border: 3px solid white;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.edit_user_btn {
+    text-decoration: none;
+    color: white;
 }
 
-.avatar-icon {
+.auth_action_content {
     position: relative;
-    top: 10px;
+    top: 1.5em;
 }
 
-.profile-info {
-    position: relative;
-    top: 7.3em;
-}
-
-.profile-edit-btn {
-    width: 200px;
-    height: 40px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.auth_action_card {
+    width: 328px;
+    height: 65px;
     background-color: white;
-    border-radius: 20px;
-    position: relative;
-    top: 9.5em;
+    border-radius: 10px;
+    margin: 0 auto;
 }
 
-.account-form {
-    background-color: white;
+.auth_action_divider {
+    border-left: 2px solid #E0E0E0;
     position: relative;
-    top: 24%;
+    top: .5em;
+    height: 50px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    padding: 2em;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
-.submit-btn {
-    width: 200px;
-    height: 40px;
-    background-image: linear-gradient(to bottom right, #546E7A, #90A4AE);
+.auth_action_btn {
+    margin: 0 auto;
+    padding-top: 4px;
+    color: #616161;
+}
+
+.room_manager_card {
+    position: relative;
+    top: 1.6em;
+}
+
+.room_manager_card h3 {
+    position: relative;
     color: white;
+    left: 1.1em;
+    padding-bottom: .6em;
+}
+
+.room_manager_list {
+    border-radius: 10px;
+    width: 328px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+}
+
+.logoBox {
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.5em;
+}
+
+.logo_img {
+    width: 150px;
+    margin: 0 auto;
 }
 </style>
 
@@ -135,7 +150,11 @@ export default defineComponent({
     name: "Profile",
     data() {
         return {
-
+            adminItems: [
+                { text: 'Create Room', icon: 'mdi-room-service' },
+                { text: 'Room Type', icon: 'mdi-bed' },
+                { text: 'Room Price', icon: 'mdi-currency-usd' },
+            ],
         }
     }
 })
