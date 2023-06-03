@@ -2,7 +2,6 @@
     <div class="update_user_bg">
         <v-container class="pl-0 pr-0">
             <div class="update_form_content">
-                <v-alert type="success" density="compact" class="mb-5" v-if="alertMessage == 'success'">Update User Successfully</v-alert>
                 <div class="d-flex">
                     <RouterLink to="/profile">
                         <v-icon icon="mdi-arrow-left" color="grey-darken-1"></v-icon>
@@ -11,37 +10,37 @@
                 </div>
                 <v-form>
                     <div class="form-group">
-                        <v-text-field label="firstname" color="blue-grey" density="comfortable" 
+                        <v-text-field label="Firstname" color="blue-grey" density="comfortable" 
                             prepend-inner-icon="mdi-account-outline" variant="solo-filled" flat>
                         </v-text-field>
                     </div>
                     <div class="form-group">
-                        <v-text-field label="surname" color="blue-grey" density="comfortable" 
+                        <v-text-field label="Surname" color="blue-grey" density="comfortable" 
                             prepend-inner-icon="mdi-account-outline" variant="solo-filled" flat>
                         </v-text-field>
                     </div>
                     <div class="form-group">
-                        <v-text-field label="address" color="blue-grey" density="comfortable" 
+                        <v-text-field label="Address" color="blue-grey" density="comfortable" 
                             prepend-inner-icon="mdi-map-marker-outline" variant="solo-filled" flat>
                         </v-text-field>
                     </div>
                     <div class="form-group">
-                        <v-text-field label="city" color="blue-grey" density="comfortable" 
+                        <v-text-field label="City" color="blue-grey" density="comfortable" 
                             prepend-inner-icon="mdi-home-city-outline" variant="solo-filled" flat>
                         </v-text-field>
                     </div>
                     <div class="form-group">
-                        <v-text-field label="country" color="blue-grey" density="comfortable" 
+                        <v-text-field label="Country" color="blue-grey" density="comfortable" 
                             prepend-inner-icon="mdi-map-outline" variant="solo-filled" flat>
                         </v-text-field>
                     </div>
                     <div class="form-group">
-                        <v-text-field label="phone" color="blue-grey" density="comfortable" 
+                        <v-text-field label="Phone" color="blue-grey" density="comfortable" 
                             prepend-inner-icon="mdi-phone-outline" variant="solo-filled" flat>
                         </v-text-field>
                     </div>
                     <div class="form-group">
-                        <v-text-field label="email" color="blue-grey" density="comfortable" 
+                        <v-text-field label="Email" color="blue-grey" density="comfortable" 
                             prepend-inner-icon="mdi-email-outline" variant="solo-filled" flat>
                         </v-text-field>
                     </div>
@@ -51,6 +50,8 @@
                             <v-icon icon="mdi-send-outline" class="pl-2"></v-icon>
                         </v-btn>
                     </div>
+                    <v-alert type="success" variant="text" density="compact" class="mt-5" v-if="alertMessage == 'success'">Update User Successfully</v-alert>
+                    <v-alert type="error" variant="text" density="compact" class="mt-5" v-if="alertMessage == 'error'">Please complete the required fields</v-alert>
                 </v-form>
             </div>
         </v-container>
@@ -93,7 +94,7 @@ export default defineComponent({
     name: "UpdateUser",
     data() {
         return {
-            alertMessage: 'none'
+            alertMessage: 'false'
         }
     }
 })
