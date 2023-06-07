@@ -120,19 +120,19 @@
         </v-carousel>
       </div>
       
-      <div class="room_content">
+      <div class="feature_room_content">
         <h3 class="pl-8 text-grey-darken-2">Rooms</h3>
-        <div class="room_card_container">
-          <div class="roomImgBox">
-            <v-img src="@/assets/room_images/comtemporary_luxury_bedroom.png" class="room_img"></v-img>
+        <div class="feature_room_card_container">
+          <div class="feature_roomImgBox">
+            <v-img src="@/assets/room_images/comtemporary_luxury_bedroom.png" class="feature_room_img"></v-img>
           </div>
-          <div class="room_card">
-            <div class="room_info">
-              <div class="room_text">
+          <div class="feature_room_card">
+            <div class="feature_room_info">
+              <div class="feature_room_text">
                 <div class="text-subtitle-2 text-grey-darken-2 font-weight-medium">Room Name</div>
                 <div class="text-body-2 text-grey-darken-1 font-weight-regular">Room Type</div>
               </div>
-              <v-btn class="room_btn" variant="outlined" color="blue-grey" size="small">
+              <v-btn class="feature_room_btn" variant="outlined" color="blue-grey" size="small">
                 View Room
                 <v-icon icon="mdi-chevron-right-circle-outline pl-2" color="blue-grey"></v-icon>
               </v-btn>
@@ -240,12 +240,12 @@
 }
 
 /** Rooms Styles */
-.room_content {
+.feature_room_content {
   position: relative;
   top: 7em;
 }
 
-.room_card_container {
+.feature_room_card_container {
   display: inline-flex;
   position: absolute;
   top: 3em;
@@ -253,7 +253,7 @@
   transform: translateX(-50%);
 }
 
-.room_card {
+.feature_room_card {
   width: 330px;
   height: 145px;
   border-radius: 15px;
@@ -261,7 +261,7 @@
   background-color: white;
 }
 
-.roomImgBox {
+.feature_roomImgBox {
   width: 160px;
   height: 107px;
   border-radius: 15px;
@@ -273,7 +273,7 @@
   overflow: hidden;
 }
 
-.roomImgBox .room_img {
+.feature_roomImgBox .feature_room_img {
   position: absolute;
   top: 0;
   left: 0;
@@ -282,13 +282,13 @@
   object-fit: cover;
 }
 
-.room_info {
+.feature_room_info {
   position: absolute;
   top: .9em;
   left: 10.6em;
 }
 
-.room_btn {
+.feature_room_btn {
   position: relative;
   top: 1em;
 }

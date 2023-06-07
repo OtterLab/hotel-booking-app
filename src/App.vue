@@ -8,7 +8,7 @@
       <v-spacer></v-spacer>
 
       <v-btn icon :ripple="false">
-        <v-icon icon="mdi-logout" size="25"></v-icon>
+        <v-icon icon="mdi-magnify" size="25"></v-icon>
       </v-btn>
     </v-app-bar>
     
@@ -17,9 +17,9 @@
         <v-list-item v-for="navLinkItem in navLinkItems" :key="navLinkItem.title" :to="navLinkItem.to" link
           color="blue-grey-darken-1">
           <template v-slot:prepend>
-            <v-icon :icon="navLinkItem.icon"></v-icon>
+            <v-icon :icon="navLinkItem.icon" class="grey-darken-2"></v-icon>
           </template>
-          <v-list-item-title>
+          <v-list-item-title class="text-grey-darken-2">
             {{ navLinkItem.title }}
           </v-list-item-title>
         </v-list-item>

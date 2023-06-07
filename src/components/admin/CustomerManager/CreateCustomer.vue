@@ -2,8 +2,11 @@
     <div class="customer_bg">
         <v-container class="pl-0 pr-0">
             <div class="customer_icon_text">
-                <v-icon icon="mdi-account-edit-outline" color="white" size="50"></v-icon>
-                <h3 class="text-white font-weight-medium">Update Customer</h3>
+                <v-icon icon="mdi-account-edit-outline" color="grey-darken-2" size="50"></v-icon>
+                <h3 class="text-grey-darken-2">
+                    <span v-if="id">Update Customer</span>
+                    <span v-if="!id">Create Customer</span>
+                </h3>
             </div>
             <v-form class="customer_form">
                 <div class="form-group">
@@ -54,8 +57,8 @@
 
 <style scoped>
 .customer_bg {
-    background-image: linear-gradient(#455A64, #90A4AE, #FFFFFF);
-    height: auto;
+    background-image: linear-gradient(#FFFFFF, #CFD8DC, #546E7A);
+    height: 120vh;
 }
 
 .customer_icon_text {

@@ -43,6 +43,8 @@ const routes = [
     name: "Reservation",
     component: () => import('@/views/ReservationPage.vue')
   },
+
+  // booking admin routes
   {
     path: "/admin/booking",
     name: "Booking",
@@ -53,6 +55,8 @@ const routes = [
     name: "BookingEdit",
     component: () => import('@/components/admin/BookingManager/CreateBooking.vue')
   },
+
+  // customer admin routes
   {
     path: "/admin/customers",
     name: "Customers",
@@ -68,16 +72,22 @@ const routes = [
     name: "CustomerEdit",
     component: () => import('@/components/admin/CustomerManager/CreateCustomer.vue')
   },
+
+  // room types admin routes
   {
     path: "/admin/room_types",
     name: "RoomTypes",
     component: () => import('@/components/admin/RoomTypeManager/RoomTypeIndex.vue')
   },
+
+  // room capacities admin routes
   {
     path: "/admin/room_capacities",
     name: "RoomCapacities",
     component: () => import('@/components/admin/RoomCapacityManager/RoomCapacityIndex.vue')
   },
+
+  // room admin routes
   {
     path: "/admin/rooms",
     name: "Rooms",
@@ -93,6 +103,8 @@ const routes = [
     name: "RoomEdit",
     component: () => import('@/components/admin/RoomManager/CreateRoom.vue')
   },
+
+  // prices admin routes
   {
     path: "/admin/prices",
     name: "Prices",

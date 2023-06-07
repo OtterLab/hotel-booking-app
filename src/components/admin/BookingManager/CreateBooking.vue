@@ -2,7 +2,7 @@
     <div class="admin_booking_bg">
         <v-container class="pl-0 pr-0">
             <div class="booking_edit_icon_text">
-                <v-icon icon="mdi-notebook-edit-outline" color="grey-darken-1" size="50"></v-icon>
+                <v-icon icon="mdi-notebook-edit-outline" color="grey-darken-2" size="50"></v-icon>
                 <h3 class="text-grey-darken-2">Update Booking Details</h3>
             </div>
             <v-form class="edit_booking_form">

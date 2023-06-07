@@ -1,6 +1,6 @@
 <template>
     <div class="profile-bg">
-        <v-container class="profile_content">
+        <v-container>
             <div class="profile_card">
                 <div class="d-flex justify-space-around">
                     <v-avatar color="white" size="60">
@@ -35,7 +35,7 @@
                     <div class="room_manager_card">
                         <h3>Admin Manager</h3>
                         <v-list density="compact" class="room_manager_list">
-                            <v-list-item v-for="(adminItem, i) in adminItems" :key="i"
+                            <v-list-item v-for="(adminItem, i) in adminItems" :key="i" :to="adminItem.to" link
                                 :value="adminItem" active-color="blue-grey" :ripple="false">
                                     <template v-slot:prepend>
                                     <v-icon :icon="adminItem.icon"></v-icon>
@@ -46,6 +46,13 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Logout button -->
+            <v-btn variant="text" class="logout_btn text-grey-darken-2" :ripple="false">
+                <v-icon icon="mdi-logout pr-2" size="25" color="grey-darken-2"></v-icon>
+                Logout
+            </v-btn>
+
             <div class="logoBox">
                 <v-img src="@/assets/golook_booking_logo.svg" class="logo_img"></v-img>
             </div>
@@ -56,11 +63,7 @@
 <style scoped>
 .profile-bg {
     background-image: linear-gradient(#37474F, #78909C, #FFFFFF);
-    height: 70vh;
-}
-
-.profile_content {
-    height: 100vh;
+    height: 80vh;
 }
 
 .profile_card {
@@ -129,16 +132,23 @@
     background-color: white;
 }
 
+.logout_btn {
+    position: relative;
+    top: 5.5em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .logoBox {
     position: absolute;
     width: 300px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 1.5em;
+    bottom: 4em;
 }
 
 .logo_img {
-    width: 150px;
+    width: 130px;
     margin: 0 auto;
 }
 </style>
@@ -151,9 +161,12 @@ export default defineComponent({
     data() {
         return {
             adminItems: [
-                { text: 'Create Room', icon: 'mdi-room-service' },
-                { text: 'Room Type', icon: 'mdi-bed' },
-                { text: 'Room Price', icon: 'mdi-currency-usd' },
+                { text: 'Room', icon: 'mdi-home-city', to: "/admin/rooms" },
+                { text: 'Room Type', icon: 'mdi-bed', to: "/admin/room_types" },
+                { text: 'Room Capacity', icon: 'mdi-room-service', to: "/admin/room_capacities" },
+                { text: 'Price', icon: 'mdi-currency-usd', to: "/admin/prices" },
+                { text: 'Booking', icon: 'mdi-clipboard-list', to: "/admin/booking" },
+                { text: 'Customer', icon: 'mdi-account-group', to: "/admin/customers" }
             ],
         }
     }
