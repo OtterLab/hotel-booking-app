@@ -44,6 +44,8 @@
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.40);
     padding: 5px;
+    position: relative;
+    top: 5px;
 }
 </style>
 

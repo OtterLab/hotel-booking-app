@@ -1,6 +1,6 @@
 <template>
     <div class="profile-bg">
-        <v-container>
+        <v-container class="profile_content">
             <div class="profile_card">
                 <div class="d-flex justify-space-around">
                     <v-avatar color="white" size="60">
@@ -66,6 +66,10 @@
     height: 80vh;
 }
 
+.profile_content {
+    height: 90vh;
+}
+
 .profile_card {
     position: relative;
     right: 1em;
@@ -100,10 +104,7 @@
     position: relative;
     top: .5em;
     height: 50px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 15px;
 }
 
 .auth_action_btn {
@@ -134,21 +135,21 @@
 
 .logout_btn {
     position: relative;
-    top: 5.5em;
+    top: 5em;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .logoBox {
-    position: absolute;
+    position: relative;
     width: 300px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 4em;
+    top: 8em;
 }
 
 .logo_img {
-    width: 130px;
+    width: 120px;
     margin: 0 auto;
 }
 </style>

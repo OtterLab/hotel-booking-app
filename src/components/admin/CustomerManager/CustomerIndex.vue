@@ -1,27 +1,28 @@
 <template>
     <div class="customer_index_bg">
-        <v-container class="pl-0 pr-0 customer_index_content">
-            <h3 class="text-white font-weight-medium customer_heading">Customer Manager</h3>
-            <v-btn class="customer_icon_link" flat rounded="xl" color="blue-grey-darken-1" size="small" :to="{name: 'CustomerCreate'}">
-                <v-icon icon="mdi-account-plus-outline pr-2" size="25"></v-icon>
-                Create Customer
-            </v-btn>
+        <v-container>
+            <div class="d-flex justify-space-between customer_heading">
+                <h3>Customer Manager</h3>
+                <v-btn icon="mdi-account-plus" flat variant="outlined" class="customer_icon_link" :ripple="false"
+                    density="comfortable" size="large" color="white" :to="{name: 'CustomerCreate'}">
+                </v-btn>
+            </div>
             
-            <v-card class="customer_details_card">
+            <v-card class="customer_details_card" :elevation="0">
                 <div class="customer_details_content">
                     <div class="customer_details_icon">
                         <v-icon icon="mdi-identifier" size="30" color="blue-grey-darken-1"></v-icon>
-                        <div class="customer_details_text">ID</div>
+                        <div class="text-body-1 text-blue-grey-darken-1 font-weight-medium customer_details_text">ID</div>
                     </div>
                     <v-divider :thickness="2" color="blue-grey" class="border-opacity-25 customer_divider"></v-divider>
                     <div class="customer_details_icon">
                         <v-icon icon="mdi-account-outline" size="30" color="blue-grey-darken-1"></v-icon>
-                        <div class="customer_details_text">Firstname</div>
+                        <div class="text-body-1 text-blue-grey-darken-1 font-weight-medium customer_details_text">Firstname</div>
                     </div>
                     <v-divider :thickness="2" color="blue-grey" class="border-opacity-25 customer_divider"></v-divider>
                     <div class="customer_details_icon">
                         <v-icon icon="mdi-account-outline" size="30" color="blue-grey-darken-1"></v-icon>
-                        <div class="customer_details_text">Surname</div>
+                        <div class="text-body-1 text-blue-grey-darken-1 font-weight-medium customer_details_text">Surname</div>
                     </div>
                     <v-divider :thickness="2" color="blue-grey" class="border-opacity-25 customer_divider"></v-divider>
                 </div>
@@ -34,45 +35,45 @@
                     </v-btn>
                 </v-card-actions>
             </v-card>
-            
         </v-container>
     </div>
 </template>
 
 <style scoped>
 .customer_index_bg {
-    background-image: linear-gradient(#546E7A,#B0BEC5);
-    height: 15vh;
+    background-image: linear-gradient(#455A64, #90A4AE);
+    height: 16vh;
     border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
 }
 
-.customer_index_content h3 {
+.customer_heading {
     position: relative;
-    top: .9em;
-    font-size: 1.4rem;
-    text-align: center;
+    left: .6em;
+    top: 1em;
+}
+
+.customer_heading h3 {
+    margin-top: .4em;
+    color: white;
+    font-weight: 500; 
 }
 
 .customer_icon_link {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 11em;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
-    height: 40px;
+    position: relative;
+    right: 1.4em;
+    border: 2px solid white;
 }
 
 .customer_details_card {
     background-color: #CFD8DC;
-    width: 330px;
-    height: 251px;
+    width: 350px;
+    height: 252px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     position: relative;
-    top: 6.2em;
+    top: 4.5em;
+    margin-bottom: 1.4em;
 }
 
 .customer_details_content {
@@ -94,11 +95,10 @@
 .customer_details_text {
     padding-left: 4px;
     padding-top: 2px;
-    color: #546E7A;
 }
 
 .edit_btn, .delete_btn {
-    border: 2px solid #607D8B;
+    border: 2px solid #546E7A;
     position: relative;
     left: .8em;
     bottom: .8em;
