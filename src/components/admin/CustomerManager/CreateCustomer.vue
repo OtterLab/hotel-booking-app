@@ -45,7 +45,7 @@
                     </v-text-field>
                 </div>
                 <div class="form-group">
-                    <v-btn type="submit" class="customer_btn" flat>
+                    <v-btn type="submit" class="customer_btn" flat :ripple="false">
                         Save Customer
                         <v-icon icon="mdi-send-outline" class="pl-3"></v-icon>
                     </v-btn>
@@ -72,7 +72,7 @@
 .customer_form {
     background-color: white;
     height: 600px;
-    width: 340px;
+    width: 350px;
     border-radius: 15px;
     padding: 1.5em;
     position: relative;

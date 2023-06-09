@@ -53,7 +53,7 @@
 
 .room_heading {
     position: relative;
-    left: 1em;
+    left: .5em;
     top: 1em;
 }
 
@@ -65,13 +65,13 @@
 
 .room_icon_link {
     position: relative;
-    right: 1.6em;
+    right: 1em;
     border: 2px solid white;
 }
 
 .room_data_table {
     background-color: #CFD8DC;
-    height: 308px;
+    height: 307px;
     width: 350px;
     position: relative;
     left: 50%;

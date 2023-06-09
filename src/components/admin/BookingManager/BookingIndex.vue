@@ -14,22 +14,22 @@
                 <div class="booking_data_content">
                     <div class="booking_icon">
                         <v-icon icon="mdi-identifier" size="30" color="blue-grey-darken-1"></v-icon>
-                        <div class="text-body-1 text-blue-grey-darken-2 font-weight-medium booking_text">ID</div>
+                        <div class="text-body-1 text-blue-grey-darken-1 font-weight-medium booking_text">ID</div>
                     </div>
                     <v-divider :thickness="2" color="blue-grey" class="border-opacity-25 booking_divider"></v-divider>
                     <div class="booking_icon">
                         <v-icon icon="mdi-identifier" size="30" color="blue-grey-darken-1"></v-icon>
-                        <div class="text-body-1 text-blue-grey-darken-2 font-weight-medium booking_text">Room ID</div>
+                        <div class="text-body-1 text-blue-grey-darken-1 font-weight-medium booking_text">Room ID</div>
                     </div>
                     <v-divider :thickness="2" color="blue-grey" class="border-opacity-25 booking_divider"></v-divider>
                     <div class="booking_icon">
                         <v-icon icon="mdi-calendar-outline" size="30" color="blue-grey-darken-1"></v-icon>
-                        <div class="text-body-1 text-blue-grey-darken-2 font-weight-medium booking_text">Start Date</div>
+                        <div class="text-body-1 text-blue-grey-darken-1 font-weight-medium booking_text">Start Date</div>
                     </div>
                     <v-divider :thickness="2" color="blue-grey" class="border-opacity-25 booking_divider"></v-divider>
                     <div class="booking_icon">
                         <v-icon icon="mdi-calendar-outline" size="30" color="blue-grey-darken-1"></v-icon>
-                        <div class="text-body-1 text-blue-grey-darken-2 font-weight-medium booking_text">End Date</div>
+                        <div class="text-body-1 text-blue-grey-darken-1 font-weight-medium booking_text">End Date</div>
                     </div>
                     <v-divider :thickness="2" color="blue-grey" class="border-opacity-25 booking_divider"></v-divider>
                 </div>

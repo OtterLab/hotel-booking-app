@@ -67,7 +67,7 @@
 .customer_details_card {
     background-color: #CFD8DC;
     width: 350px;
-    height: 252px;
+    height: 257px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 15px;

@@ -106,18 +106,18 @@ const routes = [
 
   // prices admin routes
   {
-    path: "/admin/prices",
-    name: "Prices",
+    path: "/admin/price",
+    name: "Price",
     component: () => import('@/components/admin/PriceManager/PriceIndex.vue')
   },
   {
     path: "/admin/prices/create",
-    name: "PricesCreate",
+    name: "PriceCreate",
     component: () => import('@/components/admin/PriceManager/CreatePrice.vue')
   },
   {
     path: "/admin/prices/edit", // change back to :id
-    name: "PricesEdit",
+    name: "PriceEdit",
     component: () => import('@/components/admin/PriceManager/CreatePrice.vue')
   },
 ]

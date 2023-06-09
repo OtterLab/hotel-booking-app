@@ -23,7 +23,7 @@
                     <VueDatePicker v-model="end_date" placeholder="End Date" class="date_picker"></VueDatePicker>
                 </div>
                 <div class="form-group">
-                    <v-btn type="submit" class="booking_edit_btn" flat>
+                    <v-btn type="submit" class="booking_edit_btn" flat :ripple="false">
                         Update Booking
                         <v-icon icon="mdi-send-outline" class="pl-3"></v-icon>
                     </v-btn>

@@ -30,7 +30,7 @@
                         </v-select>
                     </div>
                     <div class="form-group">
-                        <v-btn type="submit" class="room_btn" flat>
+                        <v-btn type="submit" class="room_btn" flat :ripple="false">
                             Save Room
                             <v-icon icon="mdi-send-outline" class="pl-3"></v-icon>
                         </v-btn>

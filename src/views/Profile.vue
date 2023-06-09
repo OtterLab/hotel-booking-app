@@ -165,7 +165,7 @@ export default defineComponent({
                 { text: 'Room', icon: 'mdi-home-city', to: "/admin/rooms" },
                 { text: 'Room Type', icon: 'mdi-bed', to: "/admin/room_types" },
                 { text: 'Room Capacity', icon: 'mdi-room-service', to: "/admin/room_capacities" },
-                { text: 'Price', icon: 'mdi-currency-usd', to: "/admin/prices" },
+                { text: 'Price', icon: 'mdi-currency-usd', to: "/admin/price" },
                 { text: 'Booking', icon: 'mdi-clipboard-list', to: "/admin/booking" },
                 { text: 'Customer', icon: 'mdi-account-group', to: "/admin/customers" }
             ],
