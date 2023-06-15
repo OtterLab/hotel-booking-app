@@ -119,27 +119,6 @@
           </v-carousel-item>
         </v-carousel>
       </div>
-      
-      <div class="feature_room_content">
-        <h3 class="pl-8 text-grey-darken-2">Rooms</h3>
-        <div class="feature_room_card_container">
-          <div class="feature_roomImgBox">
-            <v-img src="@/assets/room_images/comtemporary_luxury_bedroom.png" class="feature_room_img"></v-img>
-          </div>
-          <div class="feature_room_card">
-            <div class="feature_room_info">
-              <div class="feature_room_text">
-                <div class="text-subtitle-2 text-grey-darken-2 font-weight-medium">Room Name</div>
-                <div class="text-body-2 text-grey-darken-1 font-weight-regular">Room Type</div>
-              </div>
-              <v-btn class="feature_room_btn" variant="outlined" color="blue-grey" size="small">
-                View Room
-                <v-icon icon="mdi-chevron-right-circle-outline pl-2" color="blue-grey"></v-icon>
-              </v-btn>
-            </div>
-          </div>
-        </div>
-      </div>
     </v-container>
   </div>
 </template>
@@ -151,19 +130,19 @@
 }
 
 .home_content {
-  height: 200vh;
+  height: 104vh;
 }
 
 .auth_login_content {
   text-align: center;
   position: relative;
-  top: 2em;
+  top: .5em;
 }
 
 /** home icon card */
 .home_icon_card_group {
   position: relative;
-  top: 4em;
+  top: 3em;
 }
 
 .home_icon_card_content {
@@ -237,60 +216,6 @@
   width: 100%;
   height: 100%;
   text-align: center;
-}
-
-/** Rooms Styles */
-.feature_room_content {
-  position: relative;
-  top: 7em;
-}
-
-.feature_room_card_container {
-  display: inline-flex;
-  position: absolute;
-  top: 3em;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.feature_room_card {
-  width: 330px;
-  height: 145px;
-  border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  background-color: white;
-}
-
-.feature_roomImgBox {
-  width: 160px;
-  height: 107px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  position: absolute;
-  right: 10.9em;
-  top: 1.1em;
-  overflow: hidden;
-}
-
-.feature_roomImgBox .feature_room_img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.feature_room_info {
-  position: absolute;
-  top: .9em;
-  left: 10.6em;
-}
-
-.feature_room_btn {
-  position: relative;
-  top: 1em;
 }
 </style>
 
