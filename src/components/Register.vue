@@ -110,8 +110,8 @@ export default defineComponent({
     },
     methods: {
         register() {
-           this.v$.$validate()
-            if(!this.v$.$error) {
+            this.v$.$validate()
+            if(!this.v$.$invalid) {
                 this.alertMessage = 'success';
                 setTimeout(() => {
                     this.$router.push({name: "Login"})
@@ -129,7 +129,7 @@ export default defineComponent({
 
             axios.post("http://localhost:8000/api/auth/register", registerFD)
             .then((response) => {
-                console.log(response);
+                console.log(response.data);   
             })
             .catch((error) => {
                 console.log(error);

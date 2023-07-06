@@ -48,7 +48,7 @@
             </div>
 
             <!-- Logout button -->
-            <v-btn variant="text" class="logout_btn text-grey-darken-2" :ripple="false">
+            <v-btn variant="text" class="logout_btn text-grey-darken-2" :ripple="false" @click.prevent="logout">
                 <v-icon icon="mdi-logout pr-2" size="25" color="grey-darken-2"></v-icon>
                 Logout
             </v-btn>
@@ -156,6 +156,7 @@
 
 <script>
 import { defineComponent } from 'vue';
+import axios from 'axios';
 
 export default defineComponent({
     name: "Profile",
@@ -169,6 +170,27 @@ export default defineComponent({
                 { text: 'Booking', icon: 'mdi-clipboard-list', to: "/admin/booking" },
                 { text: 'Customer', icon: 'mdi-account-group', to: "/admin/customers" }
             ],
+        }
+    },
+    methods: {
+        logout() {
+            axios.get("http://localhost:8000/api/auth/logout", {
+                headers: {
+                    "Authorization": "Bearer" + localStorage.getItem("app_token")
+                }
+            })
+            .then((response) => {
+                console.log(response.data);
+                localStorage.removeItem("credentials");
+                localStorage.removeItem("app_token");
+
+                setTimeout(() => {
+                    this.$router.push({name: "Login"});
+                }, 2000);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
         }
     }
 })
